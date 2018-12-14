@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Сайт Портфолио</title>
     <link rel="stylesheet" href="{% static 'style/style.css' %}">
-    <link rel="stylesheet" href="static/style/hover.css">
-    <link rel="stylesheet" href="static/style/social_link.css">
+    <link rel="stylesheet" href="{% static 'style/hover.css' %}">
+    <link rel="stylesheet" href="{% static 'style/social_link.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
     <style>
@@ -38,6 +38,7 @@
         }
 
         .cssload-loader:before,
+
         .cssload-loader:after {
             opacity: 0;
             box-sizing: border-box;
@@ -165,8 +166,8 @@
 <div class="grid">
     <div class="nav">
         <ul>
-            <li class="hvr-bounce-to-right"><a href="#">#Главная</a></li>
-            <li class="hvr-bounce-to-right"><a href="#">#Работа</a></li>
+            <li class="hvr-bounce-to-right"><a href="{% url 'home' %}">#Главная</a></li>
+            <li class="hvr-bounce-to-right"><a href="{% url 'work' %}">#Работа</a></li>
             <li class="hvr-bounce-to-right"><a href="#">#Контакты</a></li>
             <li class="hvr-bounce-to-right"><a href="#">#Обо мне!</a></li>
             <li class="hvr-bounce-to-right"><a href="#">#Проекты</a></li>
@@ -180,6 +181,7 @@
         <a class="social-link" href="#" target="_blank"><i class="fab fa-github"></i></a>
     </div>
     {% block content %}
+
     {% endblock content %}
     <div class="underground">&copy; 2018. Все права защищены. </div>
 </div>
