@@ -20,6 +20,7 @@ body {
           'hover'
           'grid-hello'
           'article'
+          'article_post'
           'but'
           'underground';
   min-height: 100%;
@@ -102,6 +103,7 @@ body {
     grid-area: grid-hello;
     color: white;
     text-align: center;
+    align-self: start;
     padding: 20px;
     .photo {
       img {
@@ -147,6 +149,17 @@ body {
     }
   }
 
+  .article_post {
+      grid-area: article_post;
+      background-color: rgba(70, 98, 127, 0.6);
+      padding: 15px;
+      color: floralwhite;
+      align-self: start;
+      ul {
+        list-style-type: none;
+        text-align: left;
+      }
+  }
 
   .but {
     grid-area: but;
@@ -229,10 +242,12 @@ body {
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-    grid-template-rows: 150px auto auto auto 60px;
+    grid-template-rows: 110px auto 188px 105px auto;
     grid-template-areas: '. nav nav nav hover'
+    '.  article_post article_post article_post .'
     'grid-hello grid-hello grid-hello grid-hello grid-hello'
     'article article article article article'
+
     'but but but but but'
     'underground underground underground underground underground';
   }
