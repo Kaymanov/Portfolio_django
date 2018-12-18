@@ -164,6 +164,7 @@ body {
   .but {
     grid-area: but;
     align-self: start;
+    margin-top: auto;
     .button {
       perspective: 1000px;
       display: inline-block;

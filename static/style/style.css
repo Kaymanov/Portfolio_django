@@ -115,7 +115,8 @@ body {
       text-align: left; }
   .grid .but {
     grid-area: but;
-    align-self: start; }
+    align-self: start;
+    margin-top: auto; }
     .grid .but .button {
       perspective: 1000px;
       display: inline-block;
