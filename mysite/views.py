@@ -11,3 +11,6 @@ def home (request):
 def work (request):
     works = Work.objects.all()
     return render(request, 'work.html', {'works':works})
+
+def contact (request):
+    return render(request, 'contact.html')

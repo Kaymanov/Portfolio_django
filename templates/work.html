@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="article_post">
     {% for work in works %}
-           <div class="article_post">
-                    <ul>
-                        <li><h2>Наименнование организации: </h2>{{ work.name }}</li>
-                        <li>Должность: {{ work.post }}</li>
-                        <li>Обязанности: {{ work.responsibility }}</li>
-                        <li>Период работы: {{ work.date_work }}</li>
-                    </ul>
-            </div>
+               <ul>
+                   <li><h2>Наименнование организации: </h2>{{ work.name }}</li>
+                   <li>Должность: {{ work.post }}</li>
+                   <li>Обязанности: {{ work.responsibility }}</li>
+                   <li>Период работы: {{ work.date_work }}</li>
+               </ul>
     {% endfor %}
+    </div>
 {% endblock content %}
